@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------------
+A Prediction of What types of organisms will thrive and why you have that prediction.
+-------------------------------------------------------------------------------------
+
+The defectors will always eventually overpopulate the partial cooperators and the cooperators.  The more an organism cooperates, the worse off it will do.  Since every organism gets an equal amount of energy each tick of the simulation, and since cooperation means giving up all your energy from that tick to another random organism, there is no benefit to any amount of cooperation for a given subpopulation of cooperators, defectors, etc.  While in a population of cooperators, some organisms will randomly gain more energy per tick than they would have otherwise, that's necessarily balanced out by the amount of organisms who receive no food that tick due to cooperating.  As a whole, a cooperating population at best does not gain any more energy than if they had all defected, and at worse gives up all their energy to a defecting population.  In addition, the rate of growth of the population would at best stay the same as if they had all defected because the average amount of energy any given organism has at a given time is the same as if it had never defected; and at worst, it decreases relative to a defective population because it gives away some of its energy to a defecting population.
+
+Thus, a fully cooperating population would be stable but have no advantage over a fully defecting population as its growth rate and average/total energy would remain the same as if it had consisted of only defectors.  And if there were any defectors, they would randomly receive extra energy from a cooperator, increasing the total and average energy of the population of defectors, causing the growth rate of the population to exceed the growth rate of the cooperator population, and eventually causing the defector population to overpopulate the cooperator population.
+
+The same analysis applies to a partially cooperating population since, again, any cooperation interactions at best have no benefit to the population and at worst costs the population energy.
+
+-----------------------------------------------------------------------------------
+The average cooperation mean for each type of organism and the average of averages
+-----------------------------------------------------------------------------------
+Cooperator:
+PartialCooperator:
+Defector:
+Average:
+
+------------------------------------------------------------
+Whether or not the results support your prediction and why
+------------------------------------------------------------
