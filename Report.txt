@@ -8,6 +8,8 @@ Thus, a fully cooperating population would be stable but have no advantage over 
 
 The same analysis applies to a partially cooperating population since, again, any cooperation interactions at best have no benefit to the population and at worst costs the population energy.
 
+...This is essentially a communism simulator, where the Defectors are loyalists to the KGB, the Cooperators give away all their food stamps and expect others to do the same, and the Partial Cooperators give away only half of their food stamps to literally no one's advantage and only their disadvantage...
+
 -----------------------------------------------------------------------------------
 The average cooperation mean for each type of organism and the average of averages
 -----------------------------------------------------------------------------------
