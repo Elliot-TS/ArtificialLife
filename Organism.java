@@ -44,6 +44,6 @@ public abstract class Organism {
 
     /**
      * @return whether or not the organism cooperates
-    *//
+    */
     abstract boolean cooperates();
 }

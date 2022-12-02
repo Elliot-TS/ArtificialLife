@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Map;
+
 class Population {
     // Contains a map with each type of organism as the key
     // and a list of all the organisms of that type as the value
@@ -17,7 +20,7 @@ class Population {
      * Loops through all the organisms in the population and (1) updates them by 
      * calling their update method, (2) checks to see if they cooperate or defect,
      * (3) or checks to see if they reproduce.
-    *//
+    */
     public void update () {}
 
     /**
