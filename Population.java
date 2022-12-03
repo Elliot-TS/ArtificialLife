@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -89,9 +90,9 @@ class Population {
                 if (org.getEnergy() > REPRODUCTION_ENERGY) {
                     // Get the new organism
                     Organism newOrg = org.reproduce();
-                    // Replace the last organism of a random type
-                    List<Organism> deathRow = population.get(getRandomType());
-                    deathRow.remove(randGen.nextInt(deathRow.size()));
+                    // Get a random organism to be killed to make room
+                    Organism condemned = getRandomOrganism();
+                    population.get(condemned.getType()).remove(condemned);
                     // Add the new organism
                     population.get(newOrg.getType()).add(newOrg);
                 }
@@ -100,30 +101,18 @@ class Population {
     }
 
     /**
-    * Select a random organism type
-    * @return A random organism type
-    * @throws IllegalStateException when there are no organisms in the population
-    */
-    public String getRandomType() throws IllegalStateException {
-        int index = randGen.nextInt(ORGANISM_TYPES.length);
-        int originalIndex = index;
-        String type = ORGANISM_TYPES[index];
-        while (population.get(type).size() == 0) {
-            index = (index + 1) % ORGANISM_TYPES.length;
-            type = ORGANISM_TYPES[index];
-            
-            if (index == originalIndex) { throw new IllegalStateException("No Organisms in population"); }
-        }
-        return type;
-    }
-
-    /**
     * Select a random organism from the population
     * @return A random organism from the population
+    * @throws IllegalStateException when there are no organisms in the population
     */
-    public Organism getRandomOrganism () {
-        List<Organism> orgs = population.get(getRandomType());
-        return orgs.get(randGen.nextInt(orgs.size()));
+    public Organism getRandomOrganism () throws IllegalStateException {
+        // Collapse all the population arrays into one array and pick a random element
+        List<Organism> allOrgs = new ArrayList<List<Organism>>(population.values())
+            .stream()
+            .flatMap(List::stream)
+            .collect(Collectors.toList());
+        if (allOrgs.size() == 0) throw new IllegalStateException("No Organisms in population");
+        return allOrgs.get(randGen.nextInt(allOrgs.size()));
     }
 
     /**

@@ -10,6 +10,41 @@ The same analysis applies to a partially cooperating population since, again, an
 
 ...This is essentially a communism simulator, where the Defectors are loyalists to the KGB, the Cooperators give away all their food stamps and expect others to do the same, and the Partial Cooperators give away only half of their food stamps to literally no one's advantage and only their disadvantage...
 
+-----
+Data
+-----
+
+1. With 1 cooperator and the rest defectors
+Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Defectors:      100,100,100,100,100,100,100,100,100,100
+Partial:        0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Probability:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+
+2. With 1 defector and the rest cooperators
+Cooperators:    100,100,100,100,100,100,100,100,100,100
+Defectors:      0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Partial:        0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Probability:    1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+
+3. With 1 cooperator, 1 defector, and the rest partial cooperators
+Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Defectors:      0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Partial:        100,100,100,100,100,100,100,100,100,100
+Probability:    0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
+
+4. With 1/3 cooperator, 1/3 defectors, and 1/3 partial cooperators
+Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+Defectors:      100,98 ,96 ,96 ,95 ,92 ,93 ,97 ,95 ,93 
+Partial:        0,  2,  4,  4,  5,  8,  7,  3,  5,  7
+Probability:    0,.01,.02,.02,.025,.04,.035,.015,.025,.035,
+
+5. With 50 cooperators, 25 defectors, and 25 partial cooperators
+Cooperators	=   0,  0,  0,  1,  0,  0,  0,  0,  1,  0
+Defectors	=   93, 99, 87, 94, 98, 97, 100,98, 93, 99
+Partial	    =   7,  1,  13, 5,  2,  3,  0,  2,  6,  1
+Probability: .035,.005,.065,.035,.01,.015,0,.01,.04,.005
+
+
 -----------------------------------------------------------------------------------
 The average cooperation mean for each type of organism and the average of averages
 -----------------------------------------------------------------------------------
@@ -21,3 +56,5 @@ Average:
 ------------------------------------------------------------
 Whether or not the results support your prediction and why
 ------------------------------------------------------------
+
+They do support my predictions as the defectors are always the dominant species except in the extreme cases where they quickly went exinct due to insufficient numbers to outcompete the cooperators.  Also, partial cooperators tend to dominate cooperators.

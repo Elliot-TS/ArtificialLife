@@ -1,11 +1,13 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import java.util.NoSuchElementException;
 
 /**
 * 
-* Online/written sources used: Oracle Java Docs, https://stackoverflow.com/questions/45275402/how-can-i-create-a-list-with-n-objects, GeeksForGeeks
+* Online/written sources used: Oracle Java Docs, https://stackoverflow.com/questions/45275402/how-can-i-create-a-list-with-n-objects, GeeksForGeeks, https://stackoverflow.com/questions/25147094/how-can-i-turn-a-list-of-lists-into-a-list-in-java-8
 */
 class ALifeSim {
     public static void main(String[] args) {
@@ -26,9 +28,10 @@ class ALifeSim {
             for (int i = 0; i < numIterations; i++) {
                 pop.update();
             }
+            populationSize = pop.getPopulationCounts();
+
 
             // Display the output
-            populationSize = pop.getPopulationCounts();
             System.out.println("After " + numIterations + " ticks:");
             System.out.println("Cooperators\t= " + populationSize.get(Population.COOPERATOR));
             System.out.println("Defectors\t= " + populationSize.get(Population.DEFECTOR));
