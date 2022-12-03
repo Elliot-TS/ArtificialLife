@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 /**
 * 
-* Online/written sources used: Oracle Java Docs, https://stackoverflow.com/questions/45275402/how-can-i-create-a-list-with-n-objects
+* Online/written sources used: Oracle Java Docs, https://stackoverflow.com/questions/45275402/how-can-i-create-a-list-with-n-objects, GeeksForGeeks
 */
 class ALifeSim {
     public static void main(String[] args) {
@@ -36,13 +36,13 @@ class ALifeSim {
             System.out.println("\n\nMean Cooperation Probability = " + pop.calculateCooperationMean());
         }
         catch (NoSuchElementException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
         catch (NumberFormatException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
         catch (IllegalArgumentException e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 }

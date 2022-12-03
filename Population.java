@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +10,7 @@ import java.util.stream.Stream;
 class Population {
     // Contains a map with each type of organism as the key
     // and a list of all the organisms of that type as the value
-    private Map<String, List<Organism>> population;
+    private Map<String, List<Organism>> population = new HashMap<>();
 
     private Random randGen = new Random();
 
@@ -70,9 +71,8 @@ class Population {
             List<Organism> orgs = population.get(type);
 
             // List through the organisms of each type
-            Iterator<Organism> orgsIt = orgs.iterator(); 
-            while (orgsIt.hasNext()) {
-                Organism org = orgsIt.next();
+            for (int i = orgs.size()-1; i > 0; i--) {
+                Organism org = orgs.get(i);
 
                 // Update the organisms
                 org.update();
@@ -102,9 +102,19 @@ class Population {
     /**
     * Select a random organism type
     * @return A random organism type
+    * @throws IllegalStateException when there are no organisms in the population
     */
-    public String getRandomType() {
-        return ORGANISM_TYPES[randGen.nextInt(ORGANISM_TYPES.length)];
+    public String getRandomType() throws IllegalStateException {
+        int index = randGen.nextInt(ORGANISM_TYPES.length);
+        int originalIndex = index;
+        String type = ORGANISM_TYPES[index];
+        while (population.get(type).size() == 0) {
+            index = (index + 1) % ORGANISM_TYPES.length;
+            type = ORGANISM_TYPES[index];
+            
+            if (index == originalIndex) { throw new IllegalStateException("No Organisms in population"); }
+        }
+        return type;
     }
 
     /**
