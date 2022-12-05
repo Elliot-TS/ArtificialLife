@@ -7,12 +7,16 @@ import java.util.stream.Collectors;
 import java.util.NoSuchElementException;
 
 /**
-* 
+* Elliot Swaim
+* Assignment 6
+* Due 12/05/22
 * Online/written sources used: 
     *Oracle Java Docs
     * https://stackoverflow.com/questions/45275402/how-can-i-create-a-list-with-n-objects
     * GeeksForGeeks
     * https://stackoverflow.com/questions/25147094/how-can-i-turn-a-list-of-lists-into-a-list-in-java-8
+* Help obtained: none
+* “I/we confirm that the above list of sources is complete AND that I/we have not talked to anyone else (e.g., CSC 207 students) about the solution to this problem.”
 */
 class ALifeSim {
     public static void main(String[] args) {
