@@ -1,60 +1,121 @@
--------------------------------------------------------------------------------------
-A Prediction of What types of organisms will thrive and why you have that prediction.
--------------------------------------------------------------------------------------
+#1
 
-The defectors will always eventually overpopulate the partial cooperators and the cooperators.  The more an organism cooperates, the worse off it will do.  Since every organism gets an equal amount of energy each tick of the simulation, and since cooperation means giving up all your energy from that tick to another random organism, there is no benefit to any amount of cooperation for a given subpopulation of cooperators, defectors, etc.  While in a population of cooperators, some organisms will randomly gain more energy per tick than they would have otherwise, that's necessarily balanced out by the amount of organisms who receive no food that tick due to cooperating.  As a whole, a cooperating population at best does not gain any more energy than if they had all defected, and at worse gives up all their energy to a defecting population.  In addition, the rate of growth of the population would at best stay the same as if they had all defected because the average amount of energy any given organism has at a given time is the same as if it had never defected; and at worst, it decreases relative to a defective population because it gives away some of its energy to a defecting population.
+## Prediction
 
-Thus, a fully cooperating population would be stable but have no advantage over a fully defecting population as its growth rate and average/total energy would remain the same as if it had consisted of only defectors.  And if there were any defectors, they would randomly receive extra energy from a cooperator, increasing the total and average energy of the population of defectors, causing the growth rate of the population to exceed the growth rate of the cooperator population, and eventually causing the defector population to overpopulate the cooperator population.
+The cooperator will most likely be replaced once all the defectors reproduce
 
-The same analysis applies to a partially cooperating population since, again, any cooperation interactions at best have no benefit to the population and at worst costs the population energy.
+## Data
 
-...This is essentially a communism simulator, where the Defectors are loyalists to the KGB, the Cooperators give away all their food stamps and expect others to do the same, and the Partial Cooperators give away only half of their food stamps to literally no one's advantage and only their disadvantage...
+  Field             Run 1    Run 2    Run 3    Run 4    Run 5    Run 6    Run 7    Run 8    Run 9    Run 10   
+ ----------------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------- 
+  Cooperators       0        0        0        0        0        0        0        0        0        0        
+  Defectors         100      100      100      100      100      100      100      100      100      100      
+  Partial           0        0        0        0        0        0        0        0        0        0        
+  Mean Coop Prob    0.0      0.0      0.0      0.0      0.0      0.0      0.0      0.0      0.0      0.0      
+  Cooperators       0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Defectors         0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Partial           0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Avg of Avgs       0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
 
------
-Data
------
+## Analysis
 
-1. With 1 cooperator and the rest defectors
-Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Defectors:      100,100,100,100,100,100,100,100,100,100
-Partial:        0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Probability:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
+I was right since the population in each run is all defectors
 
-2. With 1 defector and the rest cooperators
-Cooperators:    100,100,100,100,100,100,100,100,100,100
-Defectors:      0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Partial:        0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Probability:    1,  1,  1,  1,  1,  1,  1,  1,  1,  1
+#2
 
-3. With 1 cooperator, 1 defector, and the rest partial cooperators
-Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Defectors:      0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Partial:        100,100,100,100,100,100,100,100,100,100
-Probability:    0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
+## Prediction
 
-4. With 1/3 cooperator, 1/3 defectors, and 1/3 partial cooperators
-Cooperators:    0,  0,  0,  0,  0,  0,  0,  0,  0,  0
-Defectors:      100,98 ,96 ,96 ,95 ,92 ,93 ,97 ,95 ,93 
-Partial:        0,  2,  4,  4,  5,  8,  7,  3,  5,  7
-Probability:    0,.01,.02,.02,.025,.04,.035,.015,.025,.035,
+The cooperators should overpopulate the defectors because the defector is likely to be replaced by 
+the decendent of a cooperator once the organisms start reproducing.
 
-5. With 50 cooperators, 25 defectors, and 25 partial cooperators
-Cooperators	=   0,  0,  0,  1,  0,  0,  0,  0,  1,  0
-Defectors	=   93, 99, 87, 94, 98, 97, 100,98, 93, 99
-Partial	    =   7,  1,  13, 5,  2,  3,  0,  2,  6,  1
-Probability: .035,.005,.065,.035,.01,.015,0,.01,.04,.005
+## Data
 
+  Field             Run 1    Run 2    Run 3    Run 4    Run 5    Run 6    Run 7    Run 8    Run 9    Run 10   
+ ----------------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------- 
+  Cooperators       100      100      100      100      100      100      100      100      100      100      
+  Defectors         0        0        0        0        0        0        0        0        0        0        
+  Partial           0        0        0        0        0        0        0        0        0        0        
+  Mean Coop Prob    1.0      1.0      1.0      1.0      1.0      1.0      1.0      1.0      1.0      1.0      
+  Cooperators       100%     100%     100%     100%     100%     100%     100%     100%     100%     100%     
+  Defectors         0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Partial           0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Avg of Avgs       33%      33%      33%      33%      33%      33%      33%      33%      33%      33%      
 
------------------------------------------------------------------------------------
-The average cooperation mean for each type of organism and the average of averages
------------------------------------------------------------------------------------
-Cooperator:
-PartialCooperator:
-Defector:
-Average:
+## Analysis
 
-------------------------------------------------------------
-Whether or not the results support your prediction and why
-------------------------------------------------------------
+I was right, because the entire population for each run consists of only cooperators.
 
-They do support my predictions as the defectors are always the dominant species except in the extreme cases where they quickly went exinct due to insufficient numbers to outcompete the cooperators.  Also, partial cooperators tend to dominate cooperators.
+#3
+
+## Prediction
+
+The partial cooperators will dominate because there's a high probability that the 1 cooperator and 1 defector will
+randomly be replaced by one of the offspring of the many partial coopertors.
+
+## Data
+
+  Field             Run 1    Run 2    Run 3    Run 4    Run 5    Run 6    Run 7    Run 8    Run 9    Run 10   
+ ----------------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------- 
+  Cooperators       0        0        0        0        0        0        0        0        0        0      
+  Defectors         0        0        0        0        0        0        0        0        0        0    
+  Partial           100      100      100      100      100      100      100      100      100      100     
+  Mean Coop Prob    0.5      0.5      0.5      0.5      0.5      0.5      0.5      0.5      0.5      0.5      
+  Cooperators       0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Defectors         0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Partial           50%      50%      50%      50%      50%      50%      50%      50%      50%      50%      
+  Avg of Avgs       17%      17%      17%      17%      17%      17%      17%      17%      17%      17%      
+
+## Analysis
+
+I was right because the entire population consisted of partial cooperators in each run
+
+#4
+
+## Prediction
+
+The defectors will dominate because cooperation, in general, at best has no effect on the total energy
+(and thus reproduction rate) of a particular sub-population, but it at worst gives some of its energy
+to another sub-population.  Thus, energy will always leave the cooperating groups and go to the defecting
+groups.  That will cause the defecting groups to have a higher reproduction rate and thus overpopulate
+the other two cooperating groups.
+
+  Field             Run 1   Run 2    Run 3   Run 4   Run 5    Run 6    Run 7  Run 8  Run 9    Run 10
+------------------------------------------------------------------------------------------------------
+  Cooperators       0       0        0       0       3        0        0      0      0        0
+  Defectors         85      91       96      96      94       95       100    100    97       93      
+  Partial           15      9        4       4       3        5        0      0      3        7       
+  Mean Coop Prob    0.075   0.045    0.02    0.02    0.045    0.025    0.0    0.0    0.015    0.035   
+  Cooperators       0%      0%       0%      0%      100%     0%       0%     0%     0%       0%      
+  Defectors         0%      0%       0%      0%      0%       0%       0%     0%     0%       0%      
+  Partial           50%     50%      50%     50%     50%      50%      0%     0%     50%      50%     
+  Avg of Avgs       17%     17%      17%     17%     50%      17%      0%     0%     17%      17%   
+
+## Analysis
+
+I was right, as the defectors dominate, and the full cooperators died out faster than the partial cooperators.
+
+#5
+
+## Prediction
+
+I predict that the defectors will still dominate, though there might still be cooperators at the end of the round
+(rather than just defectors and partial cooperators as in the last experiment).
+
+## Data
+
+  Field             Run 1    Run 2    Run 3    Run 4    Run 5    Run 6    Run 7    Run 8    Run 9    Run 10   
+ ----------------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------- 
+  Cooperators       2        1        0        0        0        1        0        0        1        0        
+  Defectors         98       97       98       98       98       98       92       85       89       100      
+  Partial           0        2        2        2        2        1        8        15       10       0        
+  Mean Coop Prob    0.02     0.02     0.01     0.01     0.01     0.015    0.04     0.075    0.06     0.0      
+  Cooperators       100%     100%     0%       0%       0%       100%     0%       0%       100%     0%       
+  Defectors         0%       0%       0%       0%       0%       0%       0%       0%       0%       0%       
+  Partial           0%       50%      50%      50%      50%      50%      50%      50%      50%      0%       
+  Avg of Avgs       33%      50%      17%      17%      17%      50%      17%      17%      50%      0%       
+
+## Analysis
+
+I was right as the population is still dominated by defectors, but there are still a few cooperators left in
+addition to the few partial cooperators left.  However, there are still usually more partial cooperators than
+cooperators.
